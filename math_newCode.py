@@ -93,6 +93,9 @@ def div(num, denom):
 def resid(num, denom):
     if denom[0] == 0:
         return 'Fail'
+    elif num[0] < 0:
+        res = abs(num[0])%denom[0] 
+        return [-1*res, 0]
     return [num[0] % denom[0], 0]
 
 def add(num1, num2):
@@ -196,6 +199,20 @@ inputString = str(input())
 outputAnswer = MathBot3(inputString)
 #я конечно понимаю, что он должен ретёрниться, но он как бы и делает это
 print(outputAnswer)
+
+# inp = input()
+# ans = 0
+# ansarr = []
+# while inp != 'no':
+    
+#     outpt = MathBot3(inp)
+#     ans += int(outpt)
+#     ansarr.append(int(outpt))
+#     print(outpt)
+#     inp = input()
+
+# print(sum(ansarr))
+# print(ans)
 
 
 
