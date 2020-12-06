@@ -90,13 +90,25 @@ def div(num, denom):
 
 #Гарантируется, что мы не берём остаток от ДЕЛЕНИЯ НА комплексное
 #И не берём остаток от ДЕЛЕНИЯ комплексного
+# def resid(num, denom):
+#     if denom[0] == 0:
+#         return 'Fail'
+#     elif num[0] < 0:
+#         res = abs(num[0])%denom[0] 
+#         return [-1*res, 0]
+#     return [num[0] % denom[0], 0]
+
 def resid(num, denom):
     if denom[0] == 0:
         return 'Fail'
-    elif num[0] < 0:
-        res = abs(num[0])%denom[0] 
-        return [-1*res, 0]
-    return [num[0] % denom[0], 0]
+    else:
+        r = abs(num[0])%abs(denom[0])
+        im = abs(num[1])%abs(denom[0])
+        if num[0] < 0:
+            r = -1 * r
+        if num[1] < 0:
+            im = -1 * im
+        return [r, im]
 
 def add(num1, num2):
     r = num1[0] + num2[0]
@@ -183,22 +195,22 @@ def preoExpress(task, taskLen):
 
 
 
-PrinyatIslam = False
-if PrinyatIslam:
-    testString = '-15i/6'
-    tStr = ' ' + testString + ' "3"'
-    answers = DivTask(tStr)
-    answers = answers[:-1]
-    testAns = ' '.join(answers)
-    print(testAns)
+# PrinyatIslam = False
+# if PrinyatIslam:
+#     testString = '-15i/6'
+#     tStr = ' ' + testString + ' "3"'
+#     answers = DivTask(tStr)
+#     answers = answers[:-1]
+#     testAns = ' '.join(answers)
+#     print(testAns)
 
 
-#ну как-то так вводится строка
-inputString = str(input())
-#и как-то так выходит ответ
-outputAnswer = MathBot3(inputString)
-#я конечно понимаю, что он должен ретёрниться, но он как бы и делает это
-print(outputAnswer)
+# #ну как-то так вводится строка
+# inputString = str(input())
+# #и как-то так выходит ответ
+# outputAnswer = MathBot3(inputString)
+# #я конечно понимаю, что он должен ретёрниться, но он как бы и делает это
+# print(outputAnswer)
 
 # inp = input()
 # ans = 0

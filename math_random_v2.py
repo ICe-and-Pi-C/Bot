@@ -41,5 +41,5 @@ def math_v4(taskString):
 
 
 
-#inpt = input()
-#print(math_v4(inpt))
+# inpt = input()
+# print(math_v4(inpt))
