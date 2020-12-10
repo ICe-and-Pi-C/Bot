@@ -1,8 +1,4 @@
-
-# coding: utf-8
-
-# In[ ]:
-
+# mathrandom
 
 def MathRandom(s):
     a = s.split('"')

@@ -37,19 +37,13 @@ def doPolynom(s):
         for j in range(1, 11):
             if (f(d, i + 1/10 * j) * lf) <= 0:
                 r = i +1 / 10 * j
-                break
-    #for i in range(-1000, 1000):
-    #   if (f(d, i) * lf) <= 0:
-    #       r = i
-    #       break
-    # Вторая версия - последняя           
+                break         
     
     if (r == -1000):
         return "no roots"
     if (lf > 0):
         l, r = r, l
     for _ in range(1000):
-   #for _ in range(100): 
         m = (l + r)/2
         if (f(d,m) > 0):
             r = m
